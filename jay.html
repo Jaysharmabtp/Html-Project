@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jay Sharma</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
+  <style>
+    .iframe-container {
+      width: 100%;
+      height: 600px; /* Adjust height as needed */
+      border: none;
+    }
+  </style>
+</head>
+```````````````````````````````                                                                         
+<body>
+  <div id="nav-container"></div>
+
+  <iframe id="content-frame" class="iframe-container" src="/Jay Sharma Website/html/home.html"></iframe>
+
+  <script>
+    // Function to load the navigation file
+    function loadNav() {
+      fetch('')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+    }
+
+    // Function to update the iframe source
+    function showSection(section) {
+      document.getElementById('content-frame').src = section + '.html';
+    }
+
+    // Load navigation on page load
+    window.onload = loadNav;
+  </script>
+</body>
+
+</html>
+
+
